@@ -1,0 +1,24 @@
+{
+  "@context": [
+    "http://www.w3.org/ns/csvw",
+    {
+      "schema": "https://schema.org/",
+      "dcat": "http://www.w3.org/ns/dcat#",
+      "dcterms": "http://purl.org/dc/terms/",
+      "prov": "http://www.w3.org/ns/prov#"
+    }
+  ],
+  "@type": "schema:Dataset",
+  "schema:name": "toxvaldb-epa-toxicology-values",
+  "schema:description": "ToxValDB (v9.7.0) is a comprehensive database of toxicity values compiled by the US EPA. It aggregates data from 51 sources (74 source tables), covering over 41,000 chemicals and 249,000 records. The dataset includes various toxicity endpoints such as LD50, NOAEL, RfD, and cancer potency factors, along with study details (species, duration, route of exposure). This brick contains the standardized records from the 'Summary Files' of the v9.7.0 release. Chemicals are identified by DTXSID and CASRN. Note: SMILES structures are not included in this summary release but can be mapped using DTXSID.",
+  "schema:keywords": ["toxicology", "EPA", "chemical-safety", "risk-assessment", "NOAEL", "LD50", "endpoints"],
+  "dcterms:license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "schema:dateCreated": "2026-01-30",
+  "schema:version": "9.7.0",
+  "schema:creator": {"@type": "schema:Organization", "schema:name": "BioBricks.ai"},
+  "dcat:distribution": [{
+    "@type": "dcat:Distribution",
+    "dcat:downloadURL": "brick/toxvaldb.parquet",
+    "dcat:mediaType": "application/x-parquet"
+  }]
+}

@@ -1,0 +1,32 @@
+schema: '2.0'
+stages:
+  download:
+    cmd: python stages/01_download.py
+    deps:
+    - path: stages/01_download.py
+      hash: md5
+      md5: 1a7dc7bad2e74ed5b0ea2de0b5fa4b64
+      size: 1565
+    outs:
+    - path: download/Data Excel Files
+      hash: md5
+      md5: 4e4c8fd0a146d61e5aea2024daff2528.dir
+      size: 80954820
+      nfiles: 109
+  build:
+    cmd: python stages/02_build.py
+    deps:
+    - path: download/Data Excel Files
+      hash: md5
+      md5: 4e4c8fd0a146d61e5aea2024daff2528.dir
+      size: 80954820
+      nfiles: 109
+    - path: stages/02_build.py
+      hash: md5
+      md5: a20e3851d9f5d03d4a1d218cf46402b4
+      size: 3035
+    outs:
+    - path: brick/toxvaldb.parquet
+      hash: md5
+      md5: cee7525822f991c49adfad9e520ddebc
+      size: 24636669
