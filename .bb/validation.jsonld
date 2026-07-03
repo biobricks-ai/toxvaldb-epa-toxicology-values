@@ -5,9 +5,9 @@
   },
   "@type": "prov:Entity",
   "schema:name": "toxvaldb-epa-toxicology-values validation report",
-  "prov:generatedAtTime": "2026-07-03T10:05:10Z",
+  "prov:generatedAtTime": "2026-07-03T10:10:44Z",
   "bb:validator": "tools/bb_validate.py",
-  "bb:verdict": "WARN",
+  "bb:verdict": "PASS",
   "bb:summary": {
     "n_parquet_files": 1,
     "total_rows": 249071,
@@ -323,10 +323,8 @@
     }
   ],
   "bb:datapackage_conformance": {
-    "issues": [
-      "toxvaldb.parquet: columns in parquet not in datapackage: ['EXPERIMENTAL_RECORD', 'EXPOSURE_FORM', 'EXPOSURE_FORM_ORIGINAL', 'EXPOSURE_METHOD', 'EXPOSURE_METHOD_ORIGINAL', 'EXPOSURE_ROUTE_ORIGINAL', 'GENERATION', 'GENERATION_ORIGINAL', 'LATIN_NAME', 'LIFESTAGE', 'LIFESTAGE_ORIGINAL', 'MEDIA', 'MEDIA_ORIGINAL', 'ORIGINAL_YEAR', 'QC_CATEGORY', 'QUALIFIER', 'RISK_ASSESSMENT_CLASS', 'SEX', 'SEX_ORIGINAL', 'SOURCE_HASH', 'SOURCE_URL', 'SPECIES_ORIGINAL', 'SPECIES_SUPERCATEGORY', 'STRAIN', 'STRAIN_ORIGINAL', 'STUDY_DURATION_CLASS', 'STUDY_DURATION_CLASS_ORIGINAL', 'STUDY_DURATION_UNITS', 'STUDY_DURATION_UNITS_ORIGINAL', 'STUDY_DURATION_VALUE', 'STUDY_DURATION_VALUE_ORIGINAL', 'STUDY_GROUP', 'STUDY_TYPE', 'STUDY_TYPE_ORIGINAL', 'SUBSOURCE_URL', 'SUB_SOURCE', 'TOXICOLOGICAL_EFFECT_CATEGORY', 'TOXICOLOGICAL_EFFECT_ORIGINAL', 'TOXVAL_NUMERIC_ORIGINAL', 'TOXVAL_SUBTYPE', 'TOXVAL_SUBTYPE_ORIGINAL', 'TOXVAL_TYPE_ORIGINAL', 'TOXVAL_TYPE_SUPERCATEGORY', 'TOXVAL_UNITS_ORIGINAL']"
-    ],
-    "conforms": false
+    "issues": [],
+    "conforms": true
   },
   "bb:web_validation": {
     "generatedAtTime": "2026-07-03T10:07:03Z",

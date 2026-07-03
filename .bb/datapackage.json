@@ -1,100 +1,260 @@
 {
   "@context": "http://www.w3.org/ns/csvw",
-  "tables": [{
-    "url": "brick/toxvaldb.parquet",
-    "tableSchema": {
-      "columns": [
-        {
-          "name": "DTXSID",
-          "titles": "DSSTox Substance Identifier",
-          "dc:description": "Unique identifier for the chemical substance in the EPA DSSTox database.",
-          "datatype": "string",
-          "propertyUrl": "http://semanticscience.org/resource/CHEMINF_000568",
-          "required": false
-        },
-        {
-          "name": "CASRN",
-          "titles": "CAS Registry Number",
-          "dc:description": "Chemical Abstracts Service Registry Number.",
-          "datatype": "string",
-          "propertyUrl": "http://semanticscience.org/resource/CHEMINF_000446",
-          "required": false
-        },
-        {
-          "name": "NAME",
-          "titles": "Chemical Name",
-          "dc:description": "Name of the chemical substance.",
-          "datatype": "string",
-          "required": false
-        },
-        {
-          "name": "SOURCE",
-          "titles": "Source",
-          "dc:description": "The agency or database from which the value was retrieved.",
-          "datatype": "string",
-          "required": true
-        },
-        {
-          "name": "TOXVAL_TYPE",
-          "titles": "Toxicity Value Type",
-          "dc:description": "The type of toxicity value (e.g., LD50, NOAEL, RfD).",
-          "datatype": "string",
-          "required": true
-        },
-        {
-          "name": "TOXVAL_NUMERIC",
-          "titles": "Toxicity Value",
-          "dc:description": "The numerical value of the toxicity endpoint.",
-          "datatype": "number",
-          "propertyUrl": "http://purl.obolibrary.org/obo/OBI_0001927",
-          "required": true
-        },
-        {
-          "name": "TOXVAL_UNITS",
-          "titles": "Units",
-          "dc:description": "Units of the toxicity value (e.g., mg/kg, mg/L).",
-          "datatype": "string",
-          "required": true
-        },
-        {
-          "name": "SPECIES_COMMON",
-          "titles": "Species",
-          "dc:description": "Common name of the test species.",
-          "datatype": "string",
-          "propertyUrl": "http://purl.obolibrary.org/obo/OBI_0100026",
-          "required": false
-        },
-        {
-          "name": "EXPOSURE_ROUTE",
-          "titles": "Exposure Route",
-          "dc:description": "Route of exposure (e.g., oral, inhalation, dermal).",
-          "datatype": "string",
-          "required": false
-        },
-        {
-          "name": "TOXICOLOGICAL_EFFECT",
-          "titles": "Toxicological Effect",
-          "dc:description": "Description of the toxic effect observed.",
-          "datatype": "string",
-          "required": false
-        },
-        {
-          "name": "YEAR",
-          "titles": "Year",
-          "dc:description": "Year of the study or assessment.",
-          "datatype": "string",
-          "required": false
-        },
-        {
-          "name": "QC_STATUS",
-          "titles": "QC Status",
-          "dc:description": "Quality control status of the record.",
-          "datatype": "string",
-          "required": false
-        }
-      ],
-      "primaryKey": null
+  "tables": [
+    {
+      "url": "brick/toxvaldb.parquet",
+      "tableSchema": {
+        "columns": [
+          {
+            "name": "DTXSID",
+            "datatype": "string",
+            "titles": "DSSTox Substance Identifier",
+            "dc:description": "Unique identifier for the chemical substance in the EPA DSSTox database."
+          },
+          {
+            "name": "CASRN",
+            "datatype": "string",
+            "titles": "CAS Registry Number",
+            "dc:description": "Chemical Abstracts Service Registry Number."
+          },
+          {
+            "name": "NAME",
+            "datatype": "string",
+            "titles": "Chemical Name",
+            "dc:description": "Name of the chemical substance."
+          },
+          {
+            "name": "SOURCE",
+            "datatype": "string",
+            "titles": "Source",
+            "dc:description": "The agency or database from which the value was retrieved."
+          },
+          {
+            "name": "SUB_SOURCE",
+            "datatype": "string"
+          },
+          {
+            "name": "TOXVAL_TYPE",
+            "datatype": "string",
+            "titles": "Toxicity Value Type",
+            "dc:description": "The type of toxicity value (e.g., LD50, NOAEL, RfD)."
+          },
+          {
+            "name": "TOXVAL_SUBTYPE",
+            "datatype": "string"
+          },
+          {
+            "name": "TOXVAL_TYPE_SUPERCATEGORY",
+            "datatype": "string"
+          },
+          {
+            "name": "QUALIFIER",
+            "datatype": "string"
+          },
+          {
+            "name": "TOXVAL_NUMERIC",
+            "datatype": "number",
+            "titles": "Toxicity Value",
+            "dc:description": "The numerical value of the toxicity endpoint."
+          },
+          {
+            "name": "TOXVAL_UNITS",
+            "datatype": "string",
+            "titles": "Units",
+            "dc:description": "Units of the toxicity value (e.g., mg/kg, mg/L)."
+          },
+          {
+            "name": "RISK_ASSESSMENT_CLASS",
+            "datatype": "string"
+          },
+          {
+            "name": "STUDY_TYPE",
+            "datatype": "string"
+          },
+          {
+            "name": "STUDY_DURATION_CLASS",
+            "datatype": "string"
+          },
+          {
+            "name": "STUDY_DURATION_VALUE",
+            "datatype": "number"
+          },
+          {
+            "name": "STUDY_DURATION_UNITS",
+            "datatype": "string"
+          },
+          {
+            "name": "SPECIES_COMMON",
+            "datatype": "string",
+            "titles": "Species",
+            "dc:description": "Common name of the test species."
+          },
+          {
+            "name": "STRAIN",
+            "datatype": "string"
+          },
+          {
+            "name": "LATIN_NAME",
+            "datatype": "string"
+          },
+          {
+            "name": "SPECIES_SUPERCATEGORY",
+            "datatype": "string"
+          },
+          {
+            "name": "SEX",
+            "datatype": "string"
+          },
+          {
+            "name": "GENERATION",
+            "datatype": "string"
+          },
+          {
+            "name": "LIFESTAGE",
+            "datatype": "string"
+          },
+          {
+            "name": "EXPOSURE_ROUTE",
+            "datatype": "string",
+            "titles": "Exposure Route",
+            "dc:description": "Route of exposure (e.g., oral, inhalation, dermal)."
+          },
+          {
+            "name": "EXPOSURE_METHOD",
+            "datatype": "string"
+          },
+          {
+            "name": "EXPOSURE_FORM",
+            "datatype": "string"
+          },
+          {
+            "name": "MEDIA",
+            "datatype": "string"
+          },
+          {
+            "name": "TOXICOLOGICAL_EFFECT",
+            "datatype": "string",
+            "titles": "Toxicological Effect",
+            "dc:description": "Description of the toxic effect observed."
+          },
+          {
+            "name": "TOXICOLOGICAL_EFFECT_CATEGORY",
+            "datatype": "string"
+          },
+          {
+            "name": "EXPERIMENTAL_RECORD",
+            "datatype": "string"
+          },
+          {
+            "name": "STUDY_GROUP",
+            "datatype": "string"
+          },
+          {
+            "name": "YEAR",
+            "datatype": "string",
+            "titles": "Year",
+            "dc:description": "Year of the study or assessment."
+          },
+          {
+            "name": "QC_CATEGORY",
+            "datatype": "string"
+          },
+          {
+            "name": "QC_STATUS",
+            "datatype": "string",
+            "titles": "QC Status",
+            "dc:description": "Quality control status of the record."
+          },
+          {
+            "name": "SOURCE_HASH",
+            "datatype": "string"
+          },
+          {
+            "name": "SOURCE_URL",
+            "datatype": "string"
+          },
+          {
+            "name": "SUBSOURCE_URL",
+            "datatype": "string"
+          },
+          {
+            "name": "TOXVAL_TYPE_ORIGINAL",
+            "datatype": "string"
+          },
+          {
+            "name": "TOXVAL_SUBTYPE_ORIGINAL",
+            "datatype": "string"
+          },
+          {
+            "name": "TOXVAL_NUMERIC_ORIGINAL",
+            "datatype": "number"
+          },
+          {
+            "name": "TOXVAL_UNITS_ORIGINAL",
+            "datatype": "string"
+          },
+          {
+            "name": "STUDY_TYPE_ORIGINAL",
+            "datatype": "string"
+          },
+          {
+            "name": "STUDY_DURATION_CLASS_ORIGINAL",
+            "datatype": "string"
+          },
+          {
+            "name": "STUDY_DURATION_VALUE_ORIGINAL",
+            "datatype": "string"
+          },
+          {
+            "name": "STUDY_DURATION_UNITS_ORIGINAL",
+            "datatype": "string"
+          },
+          {
+            "name": "SPECIES_ORIGINAL",
+            "datatype": "string"
+          },
+          {
+            "name": "STRAIN_ORIGINAL",
+            "datatype": "string"
+          },
+          {
+            "name": "SEX_ORIGINAL",
+            "datatype": "string"
+          },
+          {
+            "name": "GENERATION_ORIGINAL",
+            "datatype": "string"
+          },
+          {
+            "name": "LIFESTAGE_ORIGINAL",
+            "datatype": "string"
+          },
+          {
+            "name": "EXPOSURE_ROUTE_ORIGINAL",
+            "datatype": "string"
+          },
+          {
+            "name": "EXPOSURE_METHOD_ORIGINAL",
+            "datatype": "string"
+          },
+          {
+            "name": "EXPOSURE_FORM_ORIGINAL",
+            "datatype": "string"
+          },
+          {
+            "name": "MEDIA_ORIGINAL",
+            "datatype": "string"
+          },
+          {
+            "name": "TOXICOLOGICAL_EFFECT_ORIGINAL",
+            "datatype": "string"
+          },
+          {
+            "name": "ORIGINAL_YEAR",
+            "datatype": "string"
+          }
+        ]
+      }
     }
-  }],
-  "dc:conformsTo": "http://www.w3.org/ns/csvw"
+  ]
 }
