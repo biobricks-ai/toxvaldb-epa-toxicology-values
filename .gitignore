@@ -2,3 +2,4 @@ download/
 .venv/
 __pycache__/
 *.parquet
+*.log

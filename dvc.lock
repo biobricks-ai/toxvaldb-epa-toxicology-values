@@ -28,5 +28,5 @@ stages:
     outs:
     - path: brick/toxvaldb.parquet
       hash: md5
-      md5: cee7525822f991c49adfad9e520ddebc
-      size: 24636669
+      md5: c8ce3b3eaf9069eb2973222ee8c49608
+      size: 24636166
