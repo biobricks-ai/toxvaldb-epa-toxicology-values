@@ -1,0 +1,378 @@
+{
+  "@context": {
+    "schema": "https://schema.org/",
+    "prov": "http://www.w3.org/ns/prov#"
+  },
+  "@type": "prov:Entity",
+  "schema:name": "toxvaldb-epa-toxicology-values validation report",
+  "prov:generatedAtTime": "2026-07-03T10:05:10Z",
+  "bb:validator": "tools/bb_validate.py",
+  "bb:verdict": "WARN",
+  "bb:summary": {
+    "n_parquet_files": 1,
+    "total_rows": 249071,
+    "total_bytes": 24636166,
+    "note": ""
+  },
+  "bb:deterministic_checks": [
+    {
+      "file": "toxvaldb.parquet",
+      "path": "toxvaldb-epa-toxicology-values/brick/toxvaldb.parquet",
+      "rows": 249071,
+      "cols": 56,
+      "bytes": 24636166,
+      "columns": [
+        {
+          "name": "DTXSID",
+          "type": "large_string"
+        },
+        {
+          "name": "CASRN",
+          "type": "large_string"
+        },
+        {
+          "name": "NAME",
+          "type": "large_string"
+        },
+        {
+          "name": "SOURCE",
+          "type": "large_string"
+        },
+        {
+          "name": "SUB_SOURCE",
+          "type": "large_string"
+        },
+        {
+          "name": "TOXVAL_TYPE",
+          "type": "large_string"
+        },
+        {
+          "name": "TOXVAL_SUBTYPE",
+          "type": "large_string"
+        },
+        {
+          "name": "TOXVAL_TYPE_SUPERCATEGORY",
+          "type": "large_string"
+        },
+        {
+          "name": "QUALIFIER",
+          "type": "large_string"
+        },
+        {
+          "name": "TOXVAL_NUMERIC",
+          "type": "double"
+        },
+        {
+          "name": "TOXVAL_UNITS",
+          "type": "large_string"
+        },
+        {
+          "name": "RISK_ASSESSMENT_CLASS",
+          "type": "large_string"
+        },
+        {
+          "name": "STUDY_TYPE",
+          "type": "large_string"
+        },
+        {
+          "name": "STUDY_DURATION_CLASS",
+          "type": "large_string"
+        },
+        {
+          "name": "STUDY_DURATION_VALUE",
+          "type": "double"
+        },
+        {
+          "name": "STUDY_DURATION_UNITS",
+          "type": "large_string"
+        },
+        {
+          "name": "SPECIES_COMMON",
+          "type": "large_string"
+        },
+        {
+          "name": "STRAIN",
+          "type": "large_string"
+        },
+        {
+          "name": "LATIN_NAME",
+          "type": "large_string"
+        },
+        {
+          "name": "SPECIES_SUPERCATEGORY",
+          "type": "large_string"
+        },
+        {
+          "name": "SEX",
+          "type": "large_string"
+        },
+        {
+          "name": "GENERATION",
+          "type": "large_string"
+        },
+        {
+          "name": "LIFESTAGE",
+          "type": "large_string"
+        },
+        {
+          "name": "EXPOSURE_ROUTE",
+          "type": "large_string"
+        },
+        {
+          "name": "EXPOSURE_METHOD",
+          "type": "large_string"
+        },
+        {
+          "name": "EXPOSURE_FORM",
+          "type": "large_string"
+        },
+        {
+          "name": "MEDIA",
+          "type": "large_string"
+        },
+        {
+          "name": "TOXICOLOGICAL_EFFECT",
+          "type": "large_string"
+        },
+        {
+          "name": "TOXICOLOGICAL_EFFECT_CATEGORY",
+          "type": "large_string"
+        },
+        {
+          "name": "EXPERIMENTAL_RECORD",
+          "type": "large_string"
+        },
+        {
+          "name": "STUDY_GROUP",
+          "type": "large_string"
+        },
+        {
+          "name": "YEAR",
+          "type": "large_string"
+        },
+        {
+          "name": "QC_CATEGORY",
+          "type": "large_string"
+        },
+        {
+          "name": "QC_STATUS",
+          "type": "large_string"
+        },
+        {
+          "name": "SOURCE_HASH",
+          "type": "large_string"
+        },
+        {
+          "name": "SOURCE_URL",
+          "type": "large_string"
+        },
+        {
+          "name": "SUBSOURCE_URL",
+          "type": "large_string"
+        },
+        {
+          "name": "TOXVAL_TYPE_ORIGINAL",
+          "type": "large_string"
+        },
+        {
+          "name": "TOXVAL_SUBTYPE_ORIGINAL",
+          "type": "large_string"
+        },
+        {
+          "name": "TOXVAL_NUMERIC_ORIGINAL",
+          "type": "double"
+        },
+        {
+          "name": "TOXVAL_UNITS_ORIGINAL",
+          "type": "large_string"
+        },
+        {
+          "name": "STUDY_TYPE_ORIGINAL",
+          "type": "large_string"
+        },
+        {
+          "name": "STUDY_DURATION_CLASS_ORIGINAL",
+          "type": "large_string"
+        },
+        {
+          "name": "STUDY_DURATION_VALUE_ORIGINAL",
+          "type": "large_string"
+        },
+        {
+          "name": "STUDY_DURATION_UNITS_ORIGINAL",
+          "type": "large_string"
+        },
+        {
+          "name": "SPECIES_ORIGINAL",
+          "type": "large_string"
+        },
+        {
+          "name": "STRAIN_ORIGINAL",
+          "type": "large_string"
+        },
+        {
+          "name": "SEX_ORIGINAL",
+          "type": "large_string"
+        },
+        {
+          "name": "GENERATION_ORIGINAL",
+          "type": "large_string"
+        },
+        {
+          "name": "LIFESTAGE_ORIGINAL",
+          "type": "large_string"
+        },
+        {
+          "name": "EXPOSURE_ROUTE_ORIGINAL",
+          "type": "large_string"
+        },
+        {
+          "name": "EXPOSURE_METHOD_ORIGINAL",
+          "type": "large_string"
+        },
+        {
+          "name": "EXPOSURE_FORM_ORIGINAL",
+          "type": "large_string"
+        },
+        {
+          "name": "MEDIA_ORIGINAL",
+          "type": "large_string"
+        },
+        {
+          "name": "TOXICOLOGICAL_EFFECT_ORIGINAL",
+          "type": "large_string"
+        },
+        {
+          "name": "ORIGINAL_YEAR",
+          "type": "large_string"
+        }
+      ],
+      "null_fraction": {
+        "DTXSID": 0.0,
+        "CASRN": 0.0,
+        "NAME": 0.0,
+        "SOURCE": 0.0,
+        "SUB_SOURCE": 0.0,
+        "TOXVAL_TYPE": 0.0,
+        "TOXVAL_SUBTYPE": 0.0,
+        "TOXVAL_TYPE_SUPERCATEGORY": 0.0,
+        "QUALIFIER": 0.0,
+        "TOXVAL_NUMERIC": 0.0,
+        "TOXVAL_UNITS": 0.0,
+        "RISK_ASSESSMENT_CLASS": 0.0,
+        "STUDY_TYPE": 0.0,
+        "STUDY_DURATION_CLASS": 0.0,
+        "STUDY_DURATION_VALUE": 0.0,
+        "STUDY_DURATION_UNITS": 0.0,
+        "SPECIES_COMMON": 0.0,
+        "STRAIN": 0.0,
+        "LATIN_NAME": 0.0,
+        "SPECIES_SUPERCATEGORY": 0.0,
+        "SEX": 0.0,
+        "GENERATION": 0.0,
+        "LIFESTAGE": 0.0,
+        "EXPOSURE_ROUTE": 0.0,
+        "EXPOSURE_METHOD": 0.0,
+        "EXPOSURE_FORM": 4.8e-05,
+        "MEDIA": 0.0,
+        "TOXICOLOGICAL_EFFECT": 0.0,
+        "TOXICOLOGICAL_EFFECT_CATEGORY": 0.0,
+        "EXPERIMENTAL_RECORD": 0.0,
+        "STUDY_GROUP": 0.0,
+        "YEAR": 0.0,
+        "QC_CATEGORY": 0.0,
+        "QC_STATUS": 0.0,
+        "SOURCE_HASH": 0.0,
+        "SOURCE_URL": 0.0,
+        "SUBSOURCE_URL": 0.0,
+        "TOXVAL_TYPE_ORIGINAL": 0.0,
+        "TOXVAL_SUBTYPE_ORIGINAL": 0.0,
+        "TOXVAL_NUMERIC_ORIGINAL": 0.0,
+        "TOXVAL_UNITS_ORIGINAL": 0.0,
+        "STUDY_TYPE_ORIGINAL": 0.0,
+        "STUDY_DURATION_CLASS_ORIGINAL": 0.0,
+        "STUDY_DURATION_VALUE_ORIGINAL": 5.6e-05,
+        "STUDY_DURATION_UNITS_ORIGINAL": 0.0,
+        "SPECIES_ORIGINAL": 0.0,
+        "STRAIN_ORIGINAL": 0.0,
+        "SEX_ORIGINAL": 0.0,
+        "GENERATION_ORIGINAL": 0.0,
+        "LIFESTAGE_ORIGINAL": 0.0,
+        "EXPOSURE_ROUTE_ORIGINAL": 0.0,
+        "EXPOSURE_METHOD_ORIGINAL": 0.0,
+        "EXPOSURE_FORM_ORIGINAL": 2.4e-05,
+        "MEDIA_ORIGINAL": 0.0,
+        "TOXICOLOGICAL_EFFECT_ORIGINAL": 1.6e-05,
+        "ORIGINAL_YEAR": 0.0
+      },
+      "all_null_columns": [],
+      "sample_rows": 1056,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [
+        "SOURCE",
+        "SUB_SOURCE",
+        "QUALIFIER",
+        "SPECIES_SUPERCATEGORY",
+        "MEDIA",
+        "SUBSOURCE_URL",
+        "STUDY_DURATION_CLASS_ORIGINAL",
+        "MEDIA_ORIGINAL"
+      ],
+      "warnings": [],
+      "status": "PASS"
+    }
+  ],
+  "bb:datapackage_conformance": {
+    "issues": [
+      "toxvaldb.parquet: columns in parquet not in datapackage: ['EXPERIMENTAL_RECORD', 'EXPOSURE_FORM', 'EXPOSURE_FORM_ORIGINAL', 'EXPOSURE_METHOD', 'EXPOSURE_METHOD_ORIGINAL', 'EXPOSURE_ROUTE_ORIGINAL', 'GENERATION', 'GENERATION_ORIGINAL', 'LATIN_NAME', 'LIFESTAGE', 'LIFESTAGE_ORIGINAL', 'MEDIA', 'MEDIA_ORIGINAL', 'ORIGINAL_YEAR', 'QC_CATEGORY', 'QUALIFIER', 'RISK_ASSESSMENT_CLASS', 'SEX', 'SEX_ORIGINAL', 'SOURCE_HASH', 'SOURCE_URL', 'SPECIES_ORIGINAL', 'SPECIES_SUPERCATEGORY', 'STRAIN', 'STRAIN_ORIGINAL', 'STUDY_DURATION_CLASS', 'STUDY_DURATION_CLASS_ORIGINAL', 'STUDY_DURATION_UNITS', 'STUDY_DURATION_UNITS_ORIGINAL', 'STUDY_DURATION_VALUE', 'STUDY_DURATION_VALUE_ORIGINAL', 'STUDY_GROUP', 'STUDY_TYPE', 'STUDY_TYPE_ORIGINAL', 'SUBSOURCE_URL', 'SUB_SOURCE', 'TOXICOLOGICAL_EFFECT_CATEGORY', 'TOXICOLOGICAL_EFFECT_ORIGINAL', 'TOXVAL_NUMERIC_ORIGINAL', 'TOXVAL_SUBTYPE', 'TOXVAL_SUBTYPE_ORIGINAL', 'TOXVAL_TYPE_ORIGINAL', 'TOXVAL_TYPE_SUPERCATEGORY', 'TOXVAL_UNITS_ORIGINAL']"
+    ],
+    "conforms": false
+  },
+  "bb:web_validation": {
+    "generatedAtTime": "2026-07-03T10:07:03Z",
+    "validator": "agentic-web",
+    "confidence": "HIGH",
+    "expected_scale": "~249,071 point-of-departure toxicity values across ~41,855 chemicals (EPA ToxValDB v9.7.0)",
+    "actual_scale": "249,071 rows; 41,855 distinct DTXSID; 41,840 distinct CASRN",
+    "scale_verdict": "consistent",
+    "table_column_check": "PASS - key columns present and fully populated (0 null): TOXVAL_TYPE, TOXVAL_NUMERIC, TOXVAL_UNITS, CASRN, DTXSID, SPECIES_COMMON, STUDY_TYPE. TOXVAL_TYPE distribution dominated by expected in-vivo POD types (LD50 66,245; NOAEL 34,241; LEL 29,968; NOEL 16,125; LOAEL 14,622; RfD 2,467).",
+    "spot_checks": [
+      {
+        "claim": "ToxValDB v9.7.0 record count",
+        "source": "EPA CompTox / Zenodo v9.7.0",
+        "web_value": "249,071 records",
+        "local_value": "249,071 rows",
+        "match": true
+      },
+      {
+        "claim": "Distinct chemical count (DTXSID)",
+        "source": "EPA CompTox v9.7.0 release",
+        "web_value": "41,855 chemicals",
+        "local_value": "41,855 distinct DTXSID (41,840 CASRN)",
+        "match": true
+      },
+      {
+        "claim": "Aggregates NOAEL/LOAEL/LD50/RfD keyed by CASRN/DTXSID",
+        "source": "EPA Science Inventory (Development of ToxValDB)",
+        "web_value": "Dose-response, mortality (LD50), toxicity values (RfD) organized by DSSTox identifiers",
+        "local_value": "TOXVAL_TYPE includes LD50, NOAEL, LOAEL, RfD, LC50, NOAEC etc; keyed by CASRN+DTXSID",
+        "match": true
+      }
+    ],
+    "warning_assessments": [
+      {
+        "warning": "datapackage.json omits ~44 columns present in parquet",
+        "assessment": "benign-manifest-gap",
+        "note": "Manifest/schema documentation gap, not a data defect. Parquet has 56 cols all populated; datapackage lists ~12. Recommend regenerating datapackage.json from the actual parquet schema."
+      }
+    ],
+    "red_flags": [],
+    "sources": [
+      "https://www.epa.gov/comptox-tools/downloadable-computational-toxicology-data",
+      "https://cfpub.epa.gov/si/si_public_record_Report.cfm?dirEntryId=365383&Lab=CCTE",
+      "https://zenodo.org/records/17088058",
+      "https://epa.figshare.com/articles/dataset/ToxValDB_v9_1/20394501"
+    ],
+    "notes": "Row count (249,071) and distinct chemical count (41,855) match the EPA-reported ToxValDB v9.7.0 figures exactly. Key toxicology columns present and fully populated with expected POD value types. Only issue is the deterministic datapackage-conformance WARN (manifest omits ~44 real columns) - a documentation gap, not a data problem. Confidence HIGH."
+  }
+}
