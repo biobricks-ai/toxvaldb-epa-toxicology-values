@@ -1,0 +1,40 @@
+{
+  "@context": "../../context/source.context.jsonld",
+  "@type": "dcat:Dataset",
+  "@id": "https://biobricks.ai/bricks/toxvaldb-epa-toxicology-values",
+  "dcterms:title": "ToxValDB v9.7.0 - EPA Toxicity Values",
+  "dcterms:description": "ToxValDB (v9.7.0), a comprehensive database of toxicity values compiled by the U.S. EPA, aggregating ~249,000 point-of-departure and derived toxicity records (LD50, NOAEL, LOAEL, RfD, cancer potency factors, etc.) across ~41,855 chemicals from 51 sources. This brick downloads the ToxValDB v9.7.0 Release from Zenodo record 17088058 and standardizes the summary files into a single parquet keyed by DTXSID/CASRN.",
+  "dcterms:license": "https://creativecommons.org/licenses/by/4.0/",
+  "biobricks:licenseName": "CC BY 4.0 (per Zenodo deposit; EPA also releases the same data CC0)",
+  "biobricks:licenseClass": "attribution",
+  "biobricks:merckCommercialUse": "permitted",
+  "biobricks:licenseEvidence": [
+    {
+      "source": "stages/01_download.py",
+      "quote": "url = \"https://zenodo.org/records/17088058/files/ToxValDB%20v97_0%20Release.zip?download=1\"",
+      "confidence": "high"
+    },
+    {
+      "source": "https://zenodo.org/records/17088058",
+      "quote": "License: Creative Commons Attribution 4.0 International \u2014 'The Creative Commons Attribution license allows re-distribution and re-use of a licensed work on the condition that the creator is appropriately credited.' Record: 'ToxValDB v9.7.0 Data Release'.",
+      "confidence": "high"
+    },
+    {
+      "source": ".bb/provenance.jsonld (local, pre-existing)",
+      "quote": "\"schema:url\": \"https://zenodo.org/records/17088058\", \"dcterms:license\": \"CC0-1.0\", \"dcterms:publisher\": \"US EPA\", \"dcterms:accessRights\": \"Public Domain\"",
+      "confidence": "medium"
+    }
+  ],
+  "biobricks:reviewed": false,
+  "biobricks:reviewNotes": "Determined by BioBricks licensing-provenance annotation agent (Claude). stages/01_download.py downloads the ToxValDB v9.7.0 Release zip from Zenodo record 17088058. The authoritative Zenodo record page states its license is Creative Commons Attribution 4.0 International (CC BY 4.0) - NOT CC0. IMPORTANT DISCREPANCY the reviewer must resolve: the local .bb/provenance.jsonld and .bb/brick.jsonld assert CC0-1.0 / 'Public Domain', and the identical v9.7.0 data is deposited by EPA on Figshare (article 20394501) under CC0 (verified via Figshare API; see sibling brick toxvaldb). Because this brick's actual download source is the Zenodo deposit marked CC BY 4.0, I conservatively adopt the more restrictive attribution class for this brick. CC BY 4.0 permits commercial use with attribution => licenseClass=attribution, merckCommercialUse=permitted. HUMAN REVIEW: (1) decide whether the CC0 Figshare mirror or the CC BY 4.0 Zenodo deposit is the governing distribution, and align brick.jsonld/provenance.jsonld accordingly; (2) ToxValDB is a U.S. Government work aggregating 51 sources - EPA's own contribution is public domain, but preserve attribution to comply with the Zenodo deposit terms; (3) cite Wall/Sayre/Weitekamp/Smith, Computational Toxicology 2025.",
+  "prov:wasDerivedFrom": [
+    {
+      "@type": "dcat:Dataset",
+      "@id": "https://zenodo.org/records/17088058",
+      "dcterms:title": "ToxValDB v9.7.0 Data Release",
+      "dcterms:license": "https://creativecommons.org/licenses/by/4.0/",
+      "dcat:downloadURL": "https://zenodo.org/records/17088058/files/ToxValDB%20v97_0%20Release.zip?download=1",
+      "dcterms:publisher": "U.S. Environmental Protection Agency (EPA)"
+    }
+  ]
+}
